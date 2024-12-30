@@ -1,0 +1,47 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "hashed_password_123"
+}
+
+### API 2 Login User
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "email": "john.doe@example.com",
+    "password": "hashed_password_123"
+  }
+
+###
+POST http://localhost:3000/cart/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1NTIzMDk3fQ.6j9q8EGrIK0lVnLEhcJvyBaZSHMUmF38mdIXPe4gsic
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 5,
+  "quantity": 2
+}
+
+### 
+DELETE http://localhost:3000/cart/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1NTIzMDk3fQ.6j9q8EGrIK0lVnLEhcJvyBaZSHMUmF38mdIXPe4gsic
+
+###
+PUT http://localhost:3000/cart/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1NTIzMDk3fQ.6j9q8EGrIK0lVnLEhcJvyBaZSHMUmF38mdIXPe4gsic
+Content-Type: application/json
+
+{
+    "quantity": 5
+}
+
+###
+GET http://localhost:3000/cart/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1NTIzMDk3fQ.6j9q8EGrIK0lVnLEhcJvyBaZSHMUmF38mdIXPe4gsic
+
+
